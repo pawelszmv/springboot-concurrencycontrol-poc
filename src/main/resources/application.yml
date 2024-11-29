@@ -1,0 +1,27 @@
+spring.application.name: Concurrency Control
+
+# Database Configuration
+spring.datasource:
+  url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/concurrency-control?reWriteBatchedInserts=true}
+  username: ${DATABASE_USERNAME:user}
+  password: ${DATABASE_PASSWORD:1234}
+  driver-class-name: ${DATABASE_DRIVER:org.postgresql.Driver}
+
+# JPA Configuration
+spring.jpa:
+  hibernate.ddl-auto: ${JPA_HIBERNATE_DDL_AUTO:update}
+  show-sql: ${JPA_SHOW_SQL:true}
+  properties:
+    hibernate:
+    format_sql : ${JPA_FORMAT_SQL:true}
+    dialect: ${JPA_HIBERNATE_DIALECT:org.hibernate.dialect.PostgreSQLDialect}
+
+# Logger Configuration
+logging.level.org:
+  hibernate:
+    SQL: DEBUG
+    type.descriptor.sql.BasicBinder: TRACE
+    orm.jdbc.bind: TRACE
+  springframework:
+    data.*.*: trace
+    cache.*: trace

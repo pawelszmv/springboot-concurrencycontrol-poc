@@ -1,0 +1,17 @@
+services:
+  # PostgreSQL Database
+  concurrency_control_db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=concurrency-control
+    volumes:
+      - concurrency_control_db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+# Volumes to persist database data
+volumes:
+  concurrency_control_db:
