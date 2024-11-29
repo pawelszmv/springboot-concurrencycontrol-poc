@@ -13,9 +13,15 @@ public class ProductController
 
     private final ProductService productService;
 
-    @GetMapping("/buy")
-    public ResponseEntity<String> buyProduct(@RequestParam Integer quantity ,@RequestParam Long id ) {
-        productService.buyProduct(id, quantity);
+    @GetMapping("/buy-normal")
+    public ResponseEntity<String> buyProductNormal(@RequestParam Integer quantity ,@RequestParam Long id ) {
+        productService.buyProductNormal(id, quantity);
+        return ResponseEntity.ok("Product bought successfully");
+    }
+
+    @GetMapping("/buy-synchronized")
+    public ResponseEntity<String> buyProductSynchronized(@RequestParam Integer quantity ,@RequestParam Long id ) {
+        productService.buyProductSynchronized(id, quantity);
         return ResponseEntity.ok("Product bought successfully");
     }
 
