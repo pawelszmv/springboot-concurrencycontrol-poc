@@ -5,8 +5,7 @@ import com.concurrencycontrol.demo.repositories.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-@Service
-@RequiredArgsConstructor
+@Service @RequiredArgsConstructor
 public class ProductService {
 
     private final ProductRepository productRepository;

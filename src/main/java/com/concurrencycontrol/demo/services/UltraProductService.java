@@ -1,13 +1,11 @@
 package com.concurrencycontrol.demo.services;
 
-import com.concurrencycontrol.demo.entities.Product;
 import com.concurrencycontrol.demo.entities.UltraProduct;
 import com.concurrencycontrol.demo.repositories.UltraProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-@Service
-@RequiredArgsConstructor
+@Service @RequiredArgsConstructor
 public class UltraProductService {
 
     private final UltraProductRepository productRepository;

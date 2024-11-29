@@ -6,15 +6,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@Entity @Data @Builder @NoArgsConstructor @AllArgsConstructor
 public class UltraProduct {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ultra_product_seq")
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ultra_product_seq")
     private Long id;
 
     private String name;

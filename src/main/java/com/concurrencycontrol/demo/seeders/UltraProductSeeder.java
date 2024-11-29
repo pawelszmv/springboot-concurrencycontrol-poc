@@ -26,7 +26,8 @@ public class UltraProductSeeder implements CommandLineRunner {
             productRepository.save(UltraProduct.builder()
                     .name(faker.commerce().productName())
                     .price(faker.number().randomDouble(2, 10, 100))
-                    .quantity(faker.number().numberBetween(1, 10))
+                    //.quantity(faker.number().numberBetween(1, 10))
+                    .quantity(5)
                     .build()
             );
         }

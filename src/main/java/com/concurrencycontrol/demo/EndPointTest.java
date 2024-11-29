@@ -11,10 +11,10 @@ import java.util.concurrent.Executors;
 public class EndPointTest {
 
     // Normal -> No Locking applied
-    private static final String URL = "http://localhost:8080/products/buy-synchronized?id=1&quantity=1";
+    private static final String URL = "http://localhost:8080/products/buy-normal?id=1&quantity=1";
 
     // Memory level -> Pessimistic Locking
-    // private static final String URL = "http://localhost:8080/products/buy-normal?id=1&quantity=1";
+    // private static final String URL = "http://localhost:8080/products/buy-synchronized?id=1&quantity=1";
 
     // Database level -> Pessimistic Locking
     // private static final String URL = "http://localhost:8080/super-products/buy?id=1&quantity=1";
@@ -22,7 +22,7 @@ public class EndPointTest {
     // Database level -> Optimistic Locking
     // private static final String URL = "http://localhost:8080/ultra-products/buy?id=1&quantity=1";
 
-
+    // Simulate multiple users making the same request
     private static final int NUM_THREADS = 50;
 
     public static void main(String[] args) {

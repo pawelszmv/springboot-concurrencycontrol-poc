@@ -9,11 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@Entity @Data @Builder @NoArgsConstructor @AllArgsConstructor
 public class SuperProduct {
 
     @Id
