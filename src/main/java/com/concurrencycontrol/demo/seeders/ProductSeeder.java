@@ -22,7 +22,7 @@ public class ProductSeeder implements CommandLineRunner {
             return;
         }
 
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 2; i++) {
             productRepository.save(Product.builder()
                     .name(faker.commerce().productName())
                     .price(faker.number().randomDouble(2, 10, 100))
