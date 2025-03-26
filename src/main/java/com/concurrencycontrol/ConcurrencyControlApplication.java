@@ -1,4 +1,4 @@
-package com.concurrencycontrol.demo;
+package com.concurrencycontrol;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,9 +1,10 @@
-package com.concurrencycontrol.demo.controllers;
+package com.concurrencycontrol.infrastructure.api.controllers;
 
-import com.concurrencycontrol.demo.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.concurrencycontrol.application.services.ProductService;
 
 @RestController
 @RequestMapping("/products")

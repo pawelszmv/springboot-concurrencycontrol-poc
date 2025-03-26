@@ -1,7 +1,8 @@
-package com.concurrencycontrol.demo.services;
+package com.concurrencycontrol.application.services;
 
-import com.concurrencycontrol.demo.entities.SuperProduct;
-import com.concurrencycontrol.demo.repositories.SuperProductRepository;
+import com.concurrencycontrol.domain.entities.SuperProduct;
+import com.concurrencycontrol.infrastructure.persistence.repositories.SuperProductRepository;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

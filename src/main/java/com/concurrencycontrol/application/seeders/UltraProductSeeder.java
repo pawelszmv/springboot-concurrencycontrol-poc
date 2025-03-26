@@ -1,9 +1,7 @@
-package com.concurrencycontrol.demo.seeders;
+package com.concurrencycontrol.application.seeders;
 
-import com.concurrencycontrol.demo.entities.Product;
-import com.concurrencycontrol.demo.entities.SuperProduct;
-import com.concurrencycontrol.demo.repositories.ProductRepository;
-import com.concurrencycontrol.demo.repositories.SuperProductRepository;
+import com.concurrencycontrol.domain.entities.UltraProduct;
+import com.concurrencycontrol.infrastructure.persistence.repositories.UltraProductRepository;
 import com.github.javafaker.Faker;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -11,9 +9,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class SuperProductSeeder implements CommandLineRunner {
+public class UltraProductSeeder implements CommandLineRunner {
 
-    private final SuperProductRepository productRepository;
+    private final UltraProductRepository productRepository;
 
     private final Faker faker = new Faker();
 
@@ -25,7 +23,7 @@ public class SuperProductSeeder implements CommandLineRunner {
         }
 
         for (int i = 1; i <= 2; i++) {
-            productRepository.save(SuperProduct.builder()
+            productRepository.save(UltraProduct.builder()
                     .name(faker.commerce().productName())
                     .price(faker.number().randomDouble(2, 10, 100))
                     //.quantity(faker.number().numberBetween(1, 10))

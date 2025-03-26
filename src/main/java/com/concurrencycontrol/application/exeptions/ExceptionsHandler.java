@@ -1,4 +1,4 @@
-package com.concurrencycontrol.demo.exeptions;
+package com.concurrencycontrol.application.exeptions;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

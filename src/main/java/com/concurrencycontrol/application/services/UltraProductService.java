@@ -1,7 +1,8 @@
-package com.concurrencycontrol.demo.services;
+package com.concurrencycontrol.application.services;
 
-import com.concurrencycontrol.demo.entities.UltraProduct;
-import com.concurrencycontrol.demo.repositories.UltraProductRepository;
+import com.concurrencycontrol.domain.entities.UltraProduct;
+import com.concurrencycontrol.infrastructure.persistence.repositories.UltraProductRepository;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

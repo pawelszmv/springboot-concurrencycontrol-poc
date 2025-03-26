@@ -1,4 +1,4 @@
-package com.concurrencycontrol.demo.entities;
+package com.concurrencycontrol.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

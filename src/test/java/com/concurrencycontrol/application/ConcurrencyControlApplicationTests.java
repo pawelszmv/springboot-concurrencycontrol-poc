@@ -1,4 +1,4 @@
-package com.concurrencycontrol.demo;
+package com.concurrencycontrol.application;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
