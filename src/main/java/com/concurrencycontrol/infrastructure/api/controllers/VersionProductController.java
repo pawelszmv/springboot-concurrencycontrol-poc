@@ -7,18 +7,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.concurrencycontrol.application.services.SuperProductService;
+import com.concurrencycontrol.application.services.VersionProductService;
 
 @RestController
-@RequestMapping("/super-products")
+@RequestMapping("/version-products")
 @RequiredArgsConstructor
-public class SuperProductController {
+public class VersionProductController
+{
 
-    private final SuperProductService productService;
+    private final VersionProductService productService;
 
     @GetMapping("/buy")
-    public ResponseEntity<String> buyProduct(@RequestParam Integer quantity , @RequestParam Long id ) {
+    public ResponseEntity<String> buyProduct(@RequestParam Integer quantity ,@RequestParam Long id ) {
         productService.buyProduct(id, quantity);
-        return ResponseEntity.ok("Product bought successfully");
+        return ResponseEntity.ok("Version Product bought successfully");
     }
+
+
 }

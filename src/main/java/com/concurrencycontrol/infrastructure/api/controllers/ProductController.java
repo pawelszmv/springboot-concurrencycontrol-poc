@@ -9,22 +9,14 @@ import com.concurrencycontrol.application.services.ProductService;
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor
-public class ProductController
-{
+public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping("/buy-normal")
-    public ResponseEntity<String> buyProductNormal(@RequestParam Integer quantity ,@RequestParam Long id ) {
+    @GetMapping("/buy")
+    public ResponseEntity<String> buyProductNormal(@RequestParam Integer quantity, @RequestParam Long id) {
         productService.buyProductNormal(id, quantity);
         return ResponseEntity.ok("Product bought successfully");
     }
-
-    @GetMapping("/buy-synchronized")
-    public ResponseEntity<String> buyProductSynchronized(@RequestParam Integer quantity ,@RequestParam Long id ) {
-        productService.buyProductSynchronized(id, quantity);
-        return ResponseEntity.ok("Product bought successfully");
-    }
-
 
 }

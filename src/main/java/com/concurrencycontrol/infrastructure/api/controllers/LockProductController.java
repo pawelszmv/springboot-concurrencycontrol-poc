@@ -7,21 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.concurrencycontrol.application.services.UltraProductService;
+import com.concurrencycontrol.application.services.LockProductService;
 
 @RestController
-@RequestMapping("/ultra-products")
+@RequestMapping("/lock-products")
 @RequiredArgsConstructor
-public class UltraProductController
-{
+public class LockProductController {
 
-    private final UltraProductService productService;
+    private final LockProductService lockProductService;
 
     @GetMapping("/buy")
-    public ResponseEntity<String> buyProduct(@RequestParam Integer quantity ,@RequestParam Long id ) {
-        productService.buyProduct(id, quantity);
-        return ResponseEntity.ok("Product bought successfully");
+    public ResponseEntity<String> buyProduct(@RequestParam Integer quantity , @RequestParam Long id ) {
+        lockProductService.buyProduct(id, quantity);
+        return ResponseEntity.ok("Lock Product bought successfully");
     }
-
-
 }

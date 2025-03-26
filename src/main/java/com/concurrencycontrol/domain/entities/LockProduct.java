@@ -10,10 +10,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity @Data @Builder @NoArgsConstructor @AllArgsConstructor
-public class SuperProduct {
+public class LockProduct {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "super_product_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "lock_product_seq")
     private Long id;
 
     private String name;
