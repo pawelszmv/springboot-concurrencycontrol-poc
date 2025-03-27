@@ -7,15 +7,16 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service @RequiredArgsConstructor
+@Service
+@RequiredArgsConstructor
 public class LockProductService {
 
-    private final LockProductRepository superProductRepository;
+    private final LockProductRepository lockProductRepository;
 
     @Transactional
     public void buyProduct(Long id, Integer quantity) {
 
-        LockProduct product = superProductRepository.findById(id)
+        LockProduct product = lockProductRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Lock Product not found"));
 
         if (product.getQuantity() < quantity) {

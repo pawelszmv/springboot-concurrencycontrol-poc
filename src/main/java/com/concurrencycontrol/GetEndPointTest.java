@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class EndPointTest {
+public class GetEndPointTest {
 
     // Normal -> No Locking applied
     private static final String URL = "http://localhost:8080/products/buy?id=1&quantity=1";
