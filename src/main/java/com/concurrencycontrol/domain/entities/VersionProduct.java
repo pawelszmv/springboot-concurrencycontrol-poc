@@ -18,7 +18,6 @@ public class VersionProduct {
 
     private Integer quantity;
     
-
     @Version
     private int version;
 }
